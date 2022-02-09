@@ -9,7 +9,6 @@ int main(int argc,char* argv[]){
 
   printf("Current time: %ld\n",CLOCK::to_time_t(CLOCK::now()));
 
-  /*
   teg.registerTimer(tp, []{    
     std::cout << "\nCallback, aperiodic event at " << CLOCK::to_time_t(CLOCK::now()) << std::endl;
   });
@@ -21,7 +20,6 @@ int main(int argc,char* argv[]){
   teg.registerTimer(tp, Millisecs(1000), []{
     std::cout << "\nCallback3, periodic event with timepoint at " << CLOCK::to_time_t(CLOCK::now()) << std::endl;
   });
-  */
 
   teg.registerTimer([]{
     if(CLOCK::to_time_t(CLOCK::now()) % 2 == 0)
